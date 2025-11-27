@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CV</title>
+    <style>
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    /* Ensure the body and html elements take up the full width and height */
+    width: 100%;
+    height: 100%;
+    /* Prevents horizontal scrolling issues that might occur if padding/margins are later added */
+    overflow-x: hidden; 
+}
+      /* For your main content container */
+.container {
+    
+
+    display: grid;
+    grid-template-columns: 400px 700px;
+    grid-template-rows: 100px 80px 180px 360px 100px 60px ;
+
+}
+.container>*{
+    border: 3px solid black;
+}
+
+/*--photo sectioon css -------------------------------------------------------------------------------------------------*/
+
+.photo{
+    grid-area: 1/1/3/2;
+    
+}
+.photo{
+    display: flex;
+    justify-content: center;
+}
+
+/*--Name sectioon css -------------------------------------------------------------------------------------------------*/
+.name {
+   
+    grid-area: 1/2/3/3;
+     padding-left: 52px;
+}
+
+.name>h1{
+    margin-bottom: 0;
+}
+.name>h2{
+    margin-top: 8px;
+}
+
+
+/*---address css ------------------------------------------------------------------------------------------------*/
+.address{
+    grid-area: 2/2/3/3;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+ul{
+    margin: 0;
+    padding: 0;
+    font-size: small;
+    list-style: none;
+}
+
+
+
+/*---summary css ------------------------------------------------------------------------------------------------*/
+
+.summary{
+    grid-area: 3/1/3/2;
+}
+.summary>p{
+    font-size: small;
+}
+
+
+
+/*-----education css ----------------------------------------------------------------------------------------------*/
+.education{
+    grid-area: 4/1/4/2;
+}
+.edu>p{
+    font-size: small;
+}
+
+
+/*----compatansies css -----------------------------------------------------------------------------------------------*/
+.competensies{
+    grid-area: 5/1/5/3;
+    display: flex;
+    justify-content: space-evenly;
+}
+.competensies>p{
+    font-size: small;
+}
+
+/*----EXPERIENCE CSS -----------------------------------------------------------------------------------------------*/
+.experience{
+    grid-area: 3/2/5/3;
+}
+
+
+/*----footer css -----------------------------------------------------------------------------------------------*/
+.footer{
+    grid-area: 6/1/7/3;
+    background-color: black;
+}
+    </style>
+
+
+
+</head>
+<body>
+    
+    <div class="container">
+<!--Section photo------------------------------------------------------------------------------------------->
+        <div class="photo">
+            <img src="./Copy of SD-51220=.JPG" alt="my photo" width="200px" height="180px">
+        </div>
+        <div class="name">
+            <h1>MEHEDI HASAN PROVAT</h1>
+            <h2>REACT DEVELOPER</h3>
+        </div>
+        <div class="address">
+            <ul>
+                <li>Address:Cherag Ali, Tongi, Gazipur</li>
+                <li>Contact: +880-1949484416</li>
+            </ul>
+            <ul>
+                <li>Gmail: <a href="improvat6@gmail.com">improvat6@gmail.com</a></li>
+                <li>Facebook: <a href="www.facebook.com/mhprovat121">www.facebook.com/mhprovat121</a></li>
+                <li>LinkedIn:<a href="linkedin.com/in/mehedi-hasan-provat-963969204">linkedin.com/in/mehedi-hasan-provat-963969204</a></li>
+            </ul>
+        </div>
+<!--Section summary------------------------------------------------------------------------------------------->
+        <div class="summary">
+            <h3>PROFESSIONAL SUMMARY</h3>
+            <p>Enthusiastic and self-taught React Developer with a strong foundation in front-end development, JavaScript, and modern
+            web technologies. Passionate about building responsive, user-friendly interfaces and continuously learning new tools and
+            frameworks. Experienced in developing personal and open-source projects using React, Redux, and RESTful APIs.</p>
+        </div>
+<!--Section education------------------------------------------------------------------------------------------->
+        <div class="education">
+            <div class="edu">
+                <h3>EDUCATION</h3>
+                <p><b>  Bachelor of Science in Computer Science and Engineering</b><br>
+                        Uttara University                                          <br>
+                        January 2020 - June 2025
+                </p>
+                <p><b>  Milestone College</b>   <br>
+                        Group of Science        <br>
+                    September 2016
+                </p>
+
+                <h3>CERTIFICATIONS</h3>
+                <p><b> React Developer Certification </b>               <br>
+                    -freeCodeCamp                                       <br>
+                    <b>JavaScript Algorithms and Data Structures </b> <br> 
+                    -freeCodeCamp
+                </p>
+
+            </div>
+        </div>
+<!--Section competensies------------------------------------------------------------------------------------------->
+        <div class="competensies">
+            <h3>Core Competencies</h3>
+            <p>Problem Solving,Attention to Detail,Team Collaboration,Time Management,Continuous Learning</p>
+        </div>
+
+<!--Section experience------------------------------------------------------------------------------------------->
+        <div class="experience">
+            <h3>WORK EXPERIENCE</h3>
+            <p><b> 1. LANDING PAGE OF MOVIE WEBSITE</b><br>
+                Technologies: React, CSS3, GitHub Pages <br>
+                Octobre 2025 <br>
+                Designed and developed a responsive landing page to showcase projects and skills.<br>
+                Implemented smooth navigation and reusable components for scalability.
+            </p>
+
+            <p><b> 2.WETHER DASHBOARD</b><br>
+                Technologies: React, CSS3, GitHub Pages <br>
+                Octobre 2025 <br>
+                Designed and developed a responsive landing page to showcase projects and skills.<br>
+                Implemented smooth navigation and reusable components for scalability.
+            </p>
+
+
+            <p><b> 3.CALANDER APP </b><br>
+                Technologies: React, CSS3, GitHub Pages <br>
+                Octobre 2025 <br>
+                Designed and developed a responsive landing page to showcase projects and skills.<br>
+                Implemented smooth navigation and reusable components for scalability.
+            </p>
+
+        </div>
+
+
+
+
+<!--Section footer------------------------------------------------------------------------------------------->
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

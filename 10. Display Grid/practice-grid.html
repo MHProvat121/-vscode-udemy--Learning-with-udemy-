@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Grid</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+       .container{
+            /*step -2(make grid cells): display:grid, grid-t-cl (for cell width),grid-t-r(for cell heigh),gap (for cell gap)*/
+            display: grid;
+            grid-template-columns: repeat(5,200px);
+            grid-template-rows: repeat(5,120px);
+            gap: 3px 5px;
+            /*apply content sitting positions {justify,aling,place etc.}*/
+            justify-content: center;
+            align-content: center;
+
+            /*step-1:apply widht,height,border*/
+            border: 5px solid red;
+            width: 1500px;
+            height: 800px;
+       }
+        .text{
+            font-size: 2rem;
+            font-style: italic;
+            display: flex;
+            justify-content: center;
+        }
+        .white{
+            color: white;
+        }
+        .header{
+            /*step-3: define "grid-area" on items*/
+            grid-area: 1/1/1/6; /*values: rstart/cstart/rend/cend;*/
+            background-color: green;
+
+            /*step-1:apply widht=px,height=px,border*/
+            border: 5px solid red;
+            /*no need: step-4: after giving "grid-area" make the heigh+widht to area's 100% */
+            
+        }
+        .main-content{
+            /*step-3: define "grid-area" on items*/
+            grid-area: 2/1/5/4;
+            background-color: red;
+            order: 1;
+
+            /*step-1:apply widht=px,height=px,border*/
+            border: 10px solid blue;
+            /* no need: step-4: after giving "grid-area" make the heigh+widht to area's 100% */   
+           
+        }
+        .sidebar{
+            /*step-3: define "grid-area" on items*/
+            grid-area: 2/4/5/6;
+            background-color: yellow;
+            order: 1;
+
+           /*step-1:apply widht=px,height=px,border*/
+            border: 5px solid red;
+            /*no need:after giving "grid-area" make the heigh+widht to area's 100% */          
+            
+        }
+        .footer{
+            /*step-3: define "grid-area" on items*/
+            grid-area: 5/1/5/6;
+            background-color: purple;
+
+            /*step-1:apply widht=px,height=px,border*/
+            border: 5px solid red;
+            /*no need: after giving "grid-area" make the heigh+widht to area's 100% */           
+            
+        }
+        
+
+
+
+
+
+
+
+    </style>
+</head>
+
+
+
+<body>
+    
+    <div class="container">
+        <header class="header">
+            <span class="text white">Header</span>
+        </header>
+        <main class="main-content">
+            <span class="text">Main-Content</span>
+        </main>
+        <div class="sidebar">
+            <span class="text">Sidebar</span>
+        </div>
+        <footer class="footer">
+            <span class="text white">Footer</span>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>How importing a "image file", in a "html file" works </h1>
+    <hr>
+    <ol>
+        <li>First ,locate the folder of "index.html" / your working html file, 
+            <ul>
+                <li>ex: my "image-tag.html" working file is in "Learning With udemy" folder</li>
+            </ul>
+        <li>Second, ensure if your image.png is in the exact same folder or not.
+            <ul>
+                <li>If it is in the same folder, you can directly use the image name with extension in src attribute.</li>
+                <li>If it is in a different folder, you need to provide the relative path from your working file to the image file.
+                    <ul>
+                        <li>Example: my "image-tag.html" remains in "Learning with udem" folder</li>
+                        <li>but my "forloop.png" is in "learning with udemy/images" folder</li>
+                        <li>So, I need to go one level up from "learning with udemy" folder to access "images" folder.</li>
+                        <li>Thus, the relative path becomes "..\images\forloop.png"</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <p>Example of image in the same index.html folder</p>
+    <img src="forloop.png" alt="">
+    <hr>
+    <p>Example of image in subfolder, rather than the index.html folder</p>
+    <img src="..\images\forloop.png" alt="">
+    <img src="..\images\tempsnip1.png" alt="">
+</body>
+</html>

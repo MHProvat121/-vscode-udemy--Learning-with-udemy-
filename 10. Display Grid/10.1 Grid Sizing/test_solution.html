@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>test_solution</title>
+    <style>
+       body{
+        border: 5px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+       }
+     .parent {
+      display: grid;   
+      grid-template-rows: 1fr 1fr 2fr; /*1st row , 2nd row same 1 fraction. 3rd row twice */
+      grid-template-columns: auto 400px minmax(200px, 500px);/*1st column height=auto, 2nd column widht=400px, 3rd heigh= minmax(200px,500px)*/ 
+      grid-auto-rows: 50px;/* extra row 4's 50px high */
+      width: 80%;
+      background-color: #ddd;
+      padding: 20px;
+      margin: 2rem;
+    }
+    .parent>* {
+      background-color: seagreen;
+      color: white;
+      font-size: 18px;
+      padding: 20px;
+      border: 2px solid white;
+    }
+ 
+    </style>
+</head>
+<body>
+     <div class="parent">
+    <div class="child">width expands to fill space</div>
+    <div class="child">400px wide</div>
+    <div class="child">min 200px max 500px wide</div>
+    <div class="child">width expands to fill space</div>
+    <div class="child">400px wide</div>
+    <div class="child">min 200px max 500px wide</div>
+    <div class="child">width expands to fill space</div>
+    <div class="child">400px wide</div>
+    <div class="child">min 200px max 500px wide</div>
+    <div class="child">50px high</div>
+  </div>
+</body>
+</html>
