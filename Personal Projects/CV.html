@@ -30,9 +30,9 @@ body{
     
 
     display: grid;
-    grid-template-columns: 400px 700px;
+    grid-template-columns: 250px 500px;   /*lessen the col width*/
     grid-template-rows: 100px 80px 180px 360px 100px 60px ;
-
+    
 
     
 
@@ -67,7 +67,7 @@ body{
     display: block;
     height: auto; /*inheritence of photo block heihg*/
     width: 180px;
-    border-left: 215px solid black;
+    border-left: 95px solid rgb(128,0,128);
     
     
 }
@@ -76,7 +76,7 @@ body{
 .name {
    
     grid-area: 1/2/3/3;
-     padding-left: 52px;
+     padding-left: 20px;
 
      border-top: 3px;
     border-right: 3pxpx;
@@ -99,14 +99,14 @@ body{
 .address{
     grid-area: 2/2/3/3;
     display: inline-flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     
 }
 ul{
     margin: 0;
     padding: 0;
-    font-size: small;
+    font-size: .7rem;
     list-style: none;
 }
 
@@ -131,7 +131,7 @@ ul{
 
 }
 .summary>p{
-    font-size: small;
+    font-size: .7rem;
 }
 
 
@@ -153,10 +153,12 @@ ul{
     justify-content: center;
     align-items: center;
 
+    padding-left:10px ;
+
 }
 .edu>p{
     
-    font-size: small;
+    font-size: .75rem;
 }
 
 
@@ -164,10 +166,10 @@ ul{
 .competensies{
     grid-area: 5/1/5/3;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
     border-top: 3px;
-    border-right: 3pxpx;
+    border-right: 3px;
     border-bottom: 0px;
     border-left: 3px;
 
@@ -175,7 +177,9 @@ ul{
     border-color: black;
 }
 .competensies>p{
-    font-size: small;
+    font-size: .73rem;
+    padding-top: 10px;
+    
 }
 
 /*----EXPERIENCE CSS -----------------------------------------------------------------------------------------------*/
@@ -195,11 +199,32 @@ ul{
 
 }
 
+.experience>p{
+    font-size: .82rem;
+}
+
 
 /*----footer css -----------------------------------------------------------------------------------------------*/
 .footer{
+    
     grid-area: 6/1/7/3;
-    background-color: black;
+    
+    border-top: 3px;
+    border-right: 3px;
+    border-bottom: 3px;
+    border-left: 3px;
+
+    border-style:solid;
+    border-color: black;
+
+    background-color:rgb(128, 0, 128) ;
+
+    /*new system :width adjustment from left and right in footer*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 745px;
+    
+     
 }
     </style>
 
@@ -214,8 +239,8 @@ ul{
             <img src="./Copy of SD-51220=.JPG" alt="my photo" >
         </div>
         <div class="name">
-            <h1>MEHEDI HASAN PROVAT</h1>
-            <h2>REACT DEVELOPER</h3>
+            <h2>MEHEDI HASAN PROVAT</h2>
+            <h3>REACT DEVELOPER</h3>
         </div>
         <div class="address">
             <ul>
@@ -230,7 +255,7 @@ ul{
         </div>
 <!--Section summary------------------------------------------------------------------------------------------->
         <div class="summary">
-            <h3>PROFESSIONAL SUMMARY</h3>
+            <h4>PROFESSIONAL SUMMARY</h4>
             <p>Enthusiastic and self-taught React Developer with a strong foundation in front-end development, JavaScript, and modern
             web technologies. Passionate about building responsive, user-friendly interfaces and continuously learning new tools and
             frameworks. Experienced in developing personal and open-source projects using React, Redux, and RESTful APIs.</p>
@@ -238,7 +263,7 @@ ul{
 <!--Section education------------------------------------------------------------------------------------------->
         <div class="education">
             <div class="edu">
-                <h3>EDUCATION</h3>
+                <h4>EDUCATION</h4>
                 <p><b>  Bachelor of Science in Computer Science and Engineering</b><br>
                         Uttara University                                          <br>
                         January 2020 - June 2025
@@ -248,7 +273,7 @@ ul{
                     September 2016
                 </p>
 
-                <h3>CERTIFICATIONS</h3>
+                <h4>CERTIFICATIONS</h4>
                 <p><b> React Developer Certification </b>               <br>
                     -freeCodeCamp                                       <br>
                     <b>JavaScript Algorithms and Data Structures </b> <br> 
