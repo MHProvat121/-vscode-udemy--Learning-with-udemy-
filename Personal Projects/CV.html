@@ -6,7 +6,7 @@
     <title>React CV</title>
     <style>
 
-
+/*-- A) to view full height and widht of body (to calculate grid row column area)----------------------------------------------------------*/
 html, body {
     margin: 0;
     padding: 0;
@@ -14,9 +14,18 @@ html, body {
     width: 100%;
     height: 100%;
     /* Prevents horizontal scrolling issues that might occur if padding/margins are later added */
-    overflow-x: hidden; 
+    overflow-x: hidden; /*no overflow to right left*/
 }
-      /* For your main content container */
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/*---- B) For your main content container ----------------------------------------------------------------------*/
 .container {
     
 
@@ -24,20 +33,43 @@ html, body {
     grid-template-columns: 400px 700px;
     grid-template-rows: 100px 80px 180px 360px 100px 60px ;
 
-}
-.container>*{
-    border: 3px solid black;
+
+    
+
 }
 
-/*--photo sectioon css -------------------------------------------------------------------------------------------------*/
+        /*b end-------------------------------------------------*/
+
+
+/*--D)photo sectioon css -------------------------------------------------------------------------------------------------*/
 
 .photo{
     grid-area: 1/1/3/2;
+
+    border-top: 3px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-left: 3px;
+
+    border-style: solid;
+    border-color: black;
+
+    
     
 }
 .photo{
     display: flex;
     justify-content: center;
+   
+}
+
+.photo>img{
+    display: block;
+    height: auto; /*inheritence of photo block heihg*/
+    width: 180px;
+    border-left: 215px solid black;
+    
+    
 }
 
 /*--Name sectioon css -------------------------------------------------------------------------------------------------*/
@@ -45,6 +77,14 @@ html, body {
    
     grid-area: 1/2/3/3;
      padding-left: 52px;
+
+     border-top: 3px;
+    border-right: 3pxpx;
+    border-bottom: 0px;
+    border-left: 3px;
+
+    border-style: solid;
+    border-color: black;
 }
 
 .name>h1{
@@ -76,6 +116,19 @@ ul{
 
 .summary{
     grid-area: 3/1/3/2;
+
+    border-top: 3px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-left: 3px;
+
+    border-style: solid;
+    border-color: black;
+    
+
+    padding-left: 8px;
+    
+
 }
 .summary>p{
     font-size: small;
@@ -86,8 +139,23 @@ ul{
 /*-----education css ----------------------------------------------------------------------------------------------*/
 .education{
     grid-area: 4/1/4/2;
+
+    border-top: 3px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-left: 3px;
+
+    border-style: solid;
+    border-color: black;
+    
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .edu>p{
+    
     font-size: small;
 }
 
@@ -97,6 +165,14 @@ ul{
     grid-area: 5/1/5/3;
     display: flex;
     justify-content: space-evenly;
+
+    border-top: 3px;
+    border-right: 3pxpx;
+    border-bottom: 0px;
+    border-left: 3px;
+
+    border-style: solid;
+    border-color: black;
 }
 .competensies>p{
     font-size: small;
@@ -105,6 +181,18 @@ ul{
 /*----EXPERIENCE CSS -----------------------------------------------------------------------------------------------*/
 .experience{
     grid-area: 3/2/5/3;
+
+    border-top: 3px;
+    border-right: 3px;
+    border-bottom: 0px;
+    border-left: 3px;
+
+    border-style: solid;
+    border-color: black;
+
+    padding-left: 45px;
+    
+
 }
 
 
@@ -121,9 +209,9 @@ ul{
 <body>
     
     <div class="container">
-<!--Section photo------------------------------------------------------------------------------------------->
+<!--C) Section photo------------------------------------------------------------------------------------------->
         <div class="photo">
-            <img src="./Copy of SD-51220=.JPG" alt="my photo" width="200px" height="180px">
+            <img src="./Copy of SD-51220=.JPG" alt="my photo" >
         </div>
         <div class="name">
             <h1>MEHEDI HASAN PROVAT</h1>
@@ -207,6 +295,8 @@ ul{
 
 <!--Section footer------------------------------------------------------------------------------------------->
         <div class="footer"></div>
+
+
     </div>
 </body>
 </html>
