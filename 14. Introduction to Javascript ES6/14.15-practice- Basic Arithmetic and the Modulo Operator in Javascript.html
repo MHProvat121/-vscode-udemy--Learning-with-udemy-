@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.15-practice- Basic Arithmetic and the Modulo Operator in Javascript</title>
+</head>
+<body>
+    <script>
+        //Numbers
+
+            //a)-----simple arithmetics --------------------
+
+            //1) add  Numbers
+            const add = 5 + 7;
+            console.log(add);   // 12
+
+            //2)subtract  Numbers
+            const subtract = 20 - 4;
+            console.log(subtract);   // 16
+
+            //3) Multipy  Numbers
+            const multiply = 6 * 3;
+            console.log(multiply);   // 18
+
+
+            //4) divide Numbers
+            const divide = 24 / 6;
+            console.log(divide);   // 4
+
+
+            //b)-------------intermediate arithmetics-------------
+            //5) modulus Numbers
+            const modulus = 17 % 5;
+            console.log(modulus);   // 2  (remainder)
+
+
+            //6) Exponent
+            const exponent = 3 ** 4;
+            console.log(exponent);   // 81
+
+            //7)Unary
+
+            //Unary + (converts to number)
+            const unaryPlus = +("45");
+            console.log(unaryPlus);   // 45
+
+            //Unary – (makes negative)
+            const unaryMinus = -(9);
+            console.log(unaryMinus);   // -9
+
+            //Prefix Increment
+            let x = 5;
+            ++x;    // x becomes 6
+            console.log(x);
+
+            //Prefix Decrement
+            let y = 5;
+            --y;    // y becomes 4
+            console.log(y);
+
+            //Postfix Increment
+            let A = 10;
+            A++;    // reurns 10, then A becomes 11
+            console.log(A);
+
+            //Postfix Decrement
+            let B = 10;
+            B--;    // returns 10, then B becomes 9
+            console.log(B);
+
+
+
+
+            //c)---advanced arithmetics-----------------------
+            //8)precedence of arithmetics operators (+,- etc)
+            var a = 3 + 5 * 2 //output: 3+10 = 13
+            console.log(a)
+
+            //8.1) all operators together precedence (in single use)
+
+            var a_1 = +2 + 3 * 4 - 8 / 2 ** 2 % 3 + -5
+            // a)Exponentiation first: 2 ** 2 → 4
+            // b) same level =Multiplication / Division / Modulo - (equal levels= start left-to-right end)
+            // c) same level = Unary plus/minus are trivialized to numeric signs:+2 → 2 and + -5 → -5. So we have: 2 + 12 - 2 + -5
+            // d) (same level =Addition / Subtraction) -(equal levels= start left-to-right end):
+
+            console.log(a_1)
+
+            //8.2)all operators together precedence (in multiple use)
+            var a_2 = 4 + 6 + 8 + 10 - 3 - 5 - 7 - 20 / 4 / 5 * 6 * 2;
+            // a) Do the division/multiplication chain (left → right):
+            // b)2. Now do all addition and subtraction (left → right):
+
+            console.log(a_2);
+
+            //8.3) parantheses / brackets = brackets are calculated first
+            var a_3 = 3 + 5 * 2 //output: 3+10 = 13
+            console.log(a_3)
+            //but use ()
+            var a_4 = (3 + 5) * 2; //output: 8*2 = 16
+            console.log(a_4);
+    </script>
+</body>
+</html>

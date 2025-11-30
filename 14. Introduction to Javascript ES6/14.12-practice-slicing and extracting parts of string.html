@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.12-practice-slicing and extracting parts of string.js</title>
+</head>
+<body>
+    <script>
+    var name = "provat"
+    cutSlice_0 = name.slice(0, 0) //output: " "
+    cutSlice_1 = name.slice(0, 1) //output: p
+    cutSlice_2 = name.slice(0, 2) //output: pr
+    cutSlice_3 = name.slice(0, 3) //output: pro
+    cutSlice_4 = name.slice(0, 4) //output: prov 
+    cutSlice_5 = name.slice(0, 5) //output: prova
+    cutSlice_6 = name.slice(0, 6) //output: provat
+
+    cutSlice_7 = name.slice(1, 1) //output: " "
+    cutSlice_8 = name.slice(1, 2) //output: r
+    cutSlice_9 = name.slice(1, 3) //output: ro
+    cutSlice_10 = name.slice(1, 4) //output:rov
+    cutSlice_11 = name.slice(1, 5) //output:rova
+    cutSlice_12 = name.slice(1, 6) //output:rovat
+
+    // unexpected conditions
+    cutSlice_13 = name.slice(0, 7) //1)output: " " ------empty string
+    cutSlice_14 = name.slice(1, 0) //2)output: " " -------empty string
+
+    //3)spaces are treated as string characters
+    var sentence = "this is a sentence containing spaces "
+    cutSlice_15 = sentence.slice(0, 6) //output: "this i"
+
+
+    console.log(cutSlice_0, cutSlice_1, cutSlice_2, cutSlice_3, cutSlice_4, cutSlice_5, cutSlice_6, cutSlice_7, cutSlice_8, cutSlice_9, cutSlice_10, cutSlice_11, cutSlice_12, cutSlice_13, cutSlice_14, cutSlice_15);
+
+
+
+
+
+    </script>
+</body>
+</html>

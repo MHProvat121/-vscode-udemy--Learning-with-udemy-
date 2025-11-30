@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.13-exsercise a.1 - challange changing casing in text</title>
+</head>
+<body>
+    <script>
+    //Exsercise : Take user name as input, in smaller case , and show their name in uppercase 
+    //Example: username - "provat " 
+    //output: "Hello, Provat" 
+    //but, if user inputs "prOVAT" , it will show "ProVAT". Fix this 
+
+
+
+
+    //a)take prompt input > a.a) store it in "input" variable 
+    input = prompt("enter your name in lowercase ");
+
+    //suppose got "proVAT"
+
+    //b)slice(0.1) "provat" and get "p" > b.b) slice other extra values (1,input.length) and get "rovat"
+    cutSlice_first_letter = input.slice(0, 1); //p
+    cutSlice_extra_letter = input.slice(1, input.length); //roVAT
+
+    //c)make 'p' toUpparCase() > c.c)store it in "letter" variable
+    //d) make 'roVAT' toLowerCase() > d.d)store it in "extra" variable
+    letter = cutSlice_first_letter.toUpperCase(); //P
+    extra = cutSlice_extra_letter.toLowerCase(); //rovat
+
+    //d) concatanate (letter+extra) > d.d)store them in "name" variable
+    name = letter + extra;
+
+    //e)show output in browser
+    console.log(name);
+    alert("Hello , " + name + "!");
+    </script>
+</body>
+</html>

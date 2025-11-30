@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.13- exsercise a.0 - challange changing casing in text</title>
+</head>
+<body>
+    <script>
+    //a)take prompt input > a.a) store it in "input" variable 
+    input = prompt("enter your name in lowercase ");
+
+    //suppose got "provat"
+
+    //b)slice(0.1) "provat" and get "p" > b.b) slice other extra values (1,input.length) and get "rovat"
+    cutSlice_first_letter = input.slice(0, 1);
+    cutSlice_extra_letter = input.slice(1, input.length);
+
+    //c)make 'p' toUpparCase() > c.c)store it in "letter" variable
+    letter = cutSlice_first_letter.toUpperCase();
+
+    //d) concatanate (letter+cutSlice_1) > d.d)store them in "name" variable
+    name = letter + cutSlice_extra_letter;
+
+    //e)show output in browser
+    console.log(name);
+    alert("Hello , " + name + "!");
+
+
+
+
+
+    </script>
+</body>
+</html>
