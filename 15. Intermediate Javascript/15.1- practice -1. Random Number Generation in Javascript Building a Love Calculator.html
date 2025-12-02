@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.1. Random Number Generation in Javascript Building a Love Calculator</title>
+</head>
+<body>
+    <script>
+        /*Math.random() creates number between (0 to 0's 16 decimal numbers upto 1 but 1 excluded) e.g={0-(0.9999999999999999)} */
+            
+//----ex-1:just create any random number . creates between (0-0.9999999999999999)
+        var n = Math.random();
+        console.log(n); 
+
+//----ex-2: create a dice roll (0-6) with random -------------
+        //a)generate any random number
+        var number = Math.random();
+        //b)as number is (0-0.999999999999999) > b.1) multiply it with 6 to get range from (0-5)
+        number=number*6; // number=(0-5.99999999999999999)
+        //c) floor the random num, and add +1 with range (0-5)
+        number=Math.floor(number)+1;
+        console.log(number);
+
+
+
+
+
+    </script>
+</body>
+</html>
