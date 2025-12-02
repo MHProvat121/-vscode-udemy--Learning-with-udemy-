@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A BMI calculator with function </title>
+</head>
+<body>
+    <script>
+     /**--------BMI Calculator Challenge
+                Instructions
+                Create a BMI calculator using JavaScript functions. 
+                The Body Mass Index (BMI) is a way of estimating the amount of body fat. It's used in medicine to calculate risk of heart disease.
+                You can calculate it using the formula below, where weight divided by height squared.
+
+        equation BMI= weight(kg)/height^2(m^2)
+
+        HINT:
+        describe('bmiCalculator()', function() {
+    
+                it('ERROR: Your solution code should return the bmi as an output.', function(){
+                    expect(bmiCalculator(30,2)).not.toEqual(null);
+                });
+
+                
+                it('ERROR: Your solution should round the number to the nearest whole number.', function() {
+                    expect(bmiCalculator(60, 2)).toEqual(15);
+                });
+            });
+
+
+
+
+      -----------------------------------------------------*/   
+
+        //create your function below this line 
+        
+        //c)create function syntax . c.1) give equation value as parent value
+        function bmiCalculator(weight, height){
+                //a)creating equation:
+                var bmi = weight / (height ** 2);
+                    //b)calcualte equation> and store value hiddenly in "retrun"
+                    return bmi; 
+        }
+        
+        /*was value:
+        //d)return present, so make a variable > create call function in the variable
+        yourBmi=bmiCalculator(65,1.8);
+        */
+
+        //changed value for criteria:
+       var yourBmi=Math.floor(bmiCalculator(65,1.8));
+        alert("Your BMI value is "+ yourBmi);
+
+        
+
+
+
+
+        /*if my wight is 65kg and my height is 1.8m , I should be able to call your function like this:
+
+        var bmi = bmiCalculator(65,1.8);
+        
+        bmi should equal around 20 in this case
+
+        */
+
+
+
+
+
+
+    </script>
+</body>
+</html>

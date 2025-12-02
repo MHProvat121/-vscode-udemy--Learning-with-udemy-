@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.25-practice- functions part 3 output and return value</title>
+</head>
+<body>
+    <script>
+        //1)create parent function
+        function getMilk(money) {
+
+                alert("go to store");
+                alert("get milk of " + money + " taka  ");
+                
+
+                            //changed here: removed previous equation  numberOfBottles = Math.floor(money/1.5) with 3.e
+                                    //3.e) used child 1, in parent and > 3.e.1) used parent variables/values override childs variable 
+                                    alert(calcBottles(money, 1.5) + " bottles will come from " + money + " taka");
+                                    alert("get " + calcBottles(money , 1.5)  + " bottles ")
+
+
+                    alert("come back home");
+
+
+                return money % 1.5;
+
+            };
+           
+
+
+                            //new part: 
+                            /* get line-19: which is "var numberOfBottle = Math.floor(money / 1.5);" , 
+                            we will calculate "numberOfBottles" dynamically using  child function
+                            */
+
+                            //3) [child 1, for parent function] dynamically calculate number of bottles 
+                                    //3.a)create a function > 3.d)put equation variable startingMoney n costPerBottle
+                                    function calcBottles (startingMoney,costPerBottle){
+                                    //3.b) create equation
+                                        var numberOfBottle=Math.floor(startingMoney/costPerBottle);
+                                    //3.c) returns calcualte and gives a value
+                                        return numberOfBottle;
+                                    }
+
+
+        getMilk(13);//parent value for money
+
+
+
+
+
+    </script>
+</body>
+</html>

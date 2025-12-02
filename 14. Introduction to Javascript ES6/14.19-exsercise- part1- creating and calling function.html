@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.17-exsercise- part1- creating and calling function</title>
+</head>
+<body>
+    <script>
+
+//a) make a function 
+function main(){
+    //write specific instruction here
+    alert("Hello, World!");
+}
+
+//b) call function 
+main();
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------
+      
+//go to website link to do the exsercise: https://stanford.edu/~cpiech/karel/ide.html
+
+        /**
+     * Welcome to the Stanford Karel IDE.
+     * This is a free space for you to 
+     * write any Karel program you want.
+     **/
+
+/*---------------------------------------------------------------------
+//------ex1: get Karel a full circle------------------------
+
+     //a) main() function is parent function of goInCircle() function
+     
+            function main() {
+                //c) goInCircle is called inside the parent main() function
+                goInCircle();//calling 1st time(for half circle)
+                goInCircle();//calling 2nd time(for full circle)
+            }
+
+    //b) goInCircle() is parent of 4 other child functions 
+
+            function goInCircle() {
+                move();
+                turnLeft();
+                move();
+                turnLeft();
+    }
+--------------------------------------------------------------------------------------------*/
+
+/*
+//----ex2: put beeper diagonally 5 times in Karel-----------------
+
+//main() is the parent function of child 5 child calls 
+ function main(){
+    putBeeper();
+    diagonalMoveAndBeeper();
+    diagonalMoveAndBeeper();
+    diagonalMoveAndBeeper();
+    diagonalMoveAndBeeper();
+ }
+
+ // diagonalMoveAndBeeper(); is parent of 5 function to move a beeper and move self 
+function diagonalMoveAndBeeper(){
+    move();
+    turnLeft();
+    move();
+    putBeeper();
+    turnRight();
+}
+*/
+
+
+    </script>
+</body>
+</html>

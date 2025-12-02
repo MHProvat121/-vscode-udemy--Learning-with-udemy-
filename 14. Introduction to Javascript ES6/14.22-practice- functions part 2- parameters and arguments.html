@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.22- functions part 2 parameters and argument</title>
+</head>
+<body>
+    <script>
+        //1)make parent function
+        //a)getMilk = parent> a.1)bottle [parameter]= parent variable
+        function getMilk(bottle){
+                alert("go to store");
+                alert("get "+bottle+" bottles milk");//used parent variable parameter in parent function
+                
+                //a.2)cost= parent scope variable [can only used in function scope]
+                var cost = bottle*1.5;
+                alert(bottle+" bottles cost "+cost+" taka");
+                alert("come back home");
+        };
+        //2)call function> 2.1)give parent variable value while calling. parent value =[argument]
+        getMilk(2);
+    </script>
+</body>
+</html>

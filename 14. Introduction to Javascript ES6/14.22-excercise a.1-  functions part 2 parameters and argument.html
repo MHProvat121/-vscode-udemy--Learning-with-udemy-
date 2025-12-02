@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.22-exsercise-  functions part 2 parameters and argument</title>
+</head>
+<body>
+    <script>
+
+        function getMilk(money){
+            
+                alert("go to store");
+                alert("get milk of " + money + " taka  ");
+
+                //a.2)numberOfBottle= parent scope variable [can only used in function scope]
+                //a.2.1) Math.floor() function is used for "round a decimal number" . ex:3.56 will come 3
+
+                 var numberOfBottle = Math.floor(money / 1.5) ; //changed from: var numberOfBottle = bottle / 1.5;
+                alert(numberOfBottle + " bottles will come from " + money + " taka");
+                alert("take "+numberOfBottle+" bottles ")
+                alert("come back home");
+            };
+            //2)call function > 2.1)give parent variable value while calling. parent value =[argument]
+            getMilk(2);
+        
+
+    </script>
+</body>
+</html>
