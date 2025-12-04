@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.4- combining comparators</title>
+</head>
+<body>
+    <script>
+        /**
+         
+        these are 3 connectors that combines 2 comparative equations together
+            &&     AND = left and both side must be yes 
+            ||     OR = left/right one side yes
+            !      NOT = if yes then no, if no then yes
+
+         **/
+
+                 prompt("What is your name?");
+                    prompt("What is their name?");
+
+                    //equation part
+                    //a) create random num from range (0-99.9999999999999999)
+                    var loveScore = Math.random() * 100;
+                    //b) create solid number, add +1 to get range (1-100)
+                    loveScore = Math.floor(loveScore) + 1;
+
+                    //15.2+15.4 > -c)control flow over condition if else. notice syntax: if{}else{}; AND COMBINING COMPARATORS
+                    if (loveScore > 70) {
+                        alert("Your love score is " + loveScore + "% " + " You love each other. Like Kaniye love kaniye");
+                    }
+
+                    if(loveScore>30 && loveScore<=70){
+                        alert("Your love score is " + loveScore + "% ");
+                    }
+
+                    if(loveScore<=30) {
+                        alert("Your love score is " + loveScore + "% " + "You go together like oil and water");
+                    }
+
+
+
+    </script>
+</body>
+</html>
