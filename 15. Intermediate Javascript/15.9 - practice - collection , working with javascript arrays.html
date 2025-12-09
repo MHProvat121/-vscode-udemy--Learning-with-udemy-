@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.9- practice - collection working with javascript arrays </title>
+</head>
+<body>
+    <script>
+        /*
+            list, multiple items in one container = array 
+            ex: var egges =[0egg,1egg,2egg,3egg,4egg];
+            popular actions with list:
+            1) check position: var myEgg = eggs[1]; // output : 1egg
+            2)check total items : eggs.length; // output : 5, as there is 5 items 
+            3) check items includes: eggs.include(put any eggs name in here);
+        
+        */
+
+        /*
+            example: suppose you have 6 guest invite to your party. do following actions to make your party sequenced
+            1) store the names of the gues in a list 
+            2) call out their positions from the list 
+            3) check the lists length/total guest 
+            4) check if any guest is included/not
+        
+        //track lines for steps (1-4), equations(a-d)
+        
+        */
+
+            //1)> a)store the names of the gues in a list
+            var guests= ["provat","sajid","ahnaf","mom"];
+            alert(guests);
+
+            //2)> b)call out their positions from the list
+            var guest_0 =guests[0]; // output: provat 
+            var guest_1= guests[1];
+            var guest_2 = guests[2];
+            var guest_3 = guests[3];//output: mom
+            alert(guest_0+ guest_1+ guest_2+ guest_3);
+            
+
+
+           // 3) >c) check the lists length / total guest
+            var guestLength=guests.length;
+            alert(guestLength);
+
+
+            //4) > d) check if any guest is included / not
+            
+                //d.1) create prompt input
+                var  input = prompt("What is your Name?");
+                //d.2) create expression to check include
+                var check= guests.includes(input);
+
+                //d.3) if input includes , say welcome . else ("sorry,your not invited")
+                if(check){
+                    alert("You're invited. welcome");
+
+                }else{
+                    alert("sorry, you're not invited");
+                };
+
+
+
+
+    </script>
+</body>
+</html>

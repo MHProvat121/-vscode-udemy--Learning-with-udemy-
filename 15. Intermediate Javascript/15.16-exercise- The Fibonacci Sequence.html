@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 15.16-exercise- the fibonacci sequence : 9/11/25</title>
+</head>
+<body>
+    <script>
+        /*
+            The Fibonacci Exercise
+Instructions
+Fibonacci was an Italian mathematician who came up with the Fibonacci sequence:
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 ...
+
+Where every number is the sum of the two previous ones.
+
+e.g. 0, 1, 1, 2, 3, 5 comes from
+
+0 + 1 = 1
+
+1 + 1 = 2
+
+1 + 2 = 3
+
+2 + 3 = 5
+
+etc.
+
+Create a function where you can call it by writing the code:
+
+fibonacciGenerator (n)
+
+Where n is the number of items in the sequence.
+
+So I should be able to call:
+
+fibonacciGenerator(3) and get
+
+[0,1,1]
+
+as the output.
+
+IMPORTANT: The solution checker is expecting an array as the correct output.
+
+Do NOT change any of the existing code.
+
+You do NOT need any alerts or prompts, the result should be returned from the function as an output.
+
+The first two numbers in the sequence must be 0 and 1.
+
+Also, if you decide to create a for loop, make sure you explicitly specify var i = 0 rather than simply writing i = 0 . This is a quirk of the testing suite.
+
+e.g. for (var i = 0; i < 10; i ++)
+
+
+
+HINT: Use this Repl.it Playground to test out your solution.
+
+HINT: Use this flow chart to understand the logic if you get stuck.
+
+        //b) array container 
+var container=[];
+
+//a)create for loop
+for(var i=0; i<=10;i++){
+    //a1)create equation for fibonacci
+    n=i+1;
+    
+    //b1)push n numbers in container
+    var keep=container.push(n);
+    
+    
+}
+console.log(container);
+
+
+
+
+
+                    new:  
+                    var array = [1, 2, 3, 4, 5, 6];
+                        array[0] = 0;              //1) add 0 in the position of 0 index
+
+                        console.log(array);       //output: [0,2,3,4,5,6]
+                        console.log(array[2]);   // 2) view index number 2, which is 3. output:3
+                    array = [0,1]               //3) re-assigning the whole array (bottom precedence)
+
+
+
+
+
+        */
+
+
+
+//-----------code down here---------------------------------------------------------------------------------
+
+   //track equation/process (a-f)
+
+        function fibonacci(n){
+
+            //a) create empty array to store sequence for view
+            var output= [];
+
+            //b)re-assigned output-to show output:[0]- for input n=1
+            if(n===1){
+                output=[0]; 
+                return output;////b1)return b value
+            }
+            //c) re-assigned output - to show output :[0,1]- for input n=2
+            else if(n===2){
+                output=[0,1];   
+                return output;////c1)return c value
+            }
+
+
+            /*
+                d)-about) sum last 2 index of array+push it in last
+                suppose :   output= [0,1]
+                            last 2 are 1,0, 
+                            so 1+0= 1, push it in 
+                            so, output=[0,1,1]
+
+                 suppose : output= [0,1,1]
+                            last 2 are 1,1
+                            so 1+1 = 2, push it ni
+                            so,output= [0,1,1,2]
+
+                i)first get the length of the array, ii)show it as index
+
+                here we think,
+                output.length=x
+
+                    so, last "length number" will be x, but last "index number" will be x-1; ii)equation of last index = output[x-1]
+                    main equation: output[output.length-1]
+
+                    and, 2nd last "length number" will be x-1, but 2nd last index will be x-2; ii) equation of 2nd last index = output[x-2]
+                    equation: output[output.length-2]
+
+                ii) sum the index numbers and push them into the array
+                    equation of sum: (output[output.length - 2] + output[output.length - 1])
+                    equation of push: output.push(output[output.length - 2] + output[output.length - 1]);
+            
+            */
+                //d) re-assign output
+                else{
+                    output = [0,1]
+                    
+                        /*
+                        about loop
+                        start:here, least array index where loop will start after is 2 so, i=2
+                        end: i will be greater than 2 less than n, i<n
+                        change: i++
+                        */
+                    //d2) create a for loop
+                    for (var i=2;i<n;i++){
+                         //d1)sum the last index numbers and push them into the array
+                    output.push(output[output.length - 2] + output[output.length - 1]);
+                    }
+                   
+                    
+                    return output;//d1)return d value
+                }
+        }
+         //f) call function, f1)and store + show all retrun value in variable "output"
+            var output = fibonacci(220);
+            alert(output);
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

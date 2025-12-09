@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.13- exercise- control statement while loop</title>
+</head>
+<body>
+    <script>
+        /*
+            Exercise: 
+            99 bottles of beer on the wall, 99 bottles of beer.
+            Take one down and pass it around, 98 bottles of beer on the wall.
+            .......
+            1 bottle of beer on the wall, 1 bottle of beer.
+            Take one down and pass it around, 0 of beer on the wall.
+
+            
+                    
+        
+        
+        
+            If you want to challenge yourself further, try changing the code to make the english more grammatically correct.
+            So the final output should say "1 bottle of beer on the wall" when numberOfBottles is equal to 1 rather than "1 bottles of beer on the wall" 
+            and when numberOfBottles is equal to 0, 
+            you can make the output "No more bottles of beer on the wall" instead of 0 bottles of beer on the wall".
+        
+        */
+
+            //track (a-f)
+
+                //b) for equation: number of bottles 
+                    numberOfBottles=99;
+                //c)for equation: loop while bottles are 99 to 0 (included)
+                        while (numberOfBottles >= 0) {
+
+                        //e) when 1, change word =bottles to bottle
+                        bottleWord= "bottles";
+                        if (numberOfBottles == 1) {
+                            bottleWord= "bottle";
+                        }
+                        //f) when 0, change numberOfBottles into word=no more bottles
+                        if(numberOfBottles===0){
+                            bottleWord_0="No more ";
+                            console.log(bottleWord_0 + " " + bottleWord + " of beer on the wall");
+                            console.log(bottleWord_0 + " " + bottleWord + " of beer,");
+                            
+                        }
+                        
+       
+                //a) create sentences 
+                console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+                console.log(numberOfBottles + " " + bottleWord + " of beer,");
+                console.log("Take one down, pass it around,");
+
+                                //d)for equation: decrease from 99 to 98 ..... to 0
+                                numberOfBottles--;
+
+                console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+        }
+
+    </script>
+</body>
+</html>

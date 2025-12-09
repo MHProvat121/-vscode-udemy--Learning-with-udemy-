@@ -96,13 +96,18 @@ Try to run your code in this Repl.it playground and check it against the known l
         
    ---------------------------------------------------------------     */
        function isLeap(year){
+        //a) if y%4=0 check inside, else return not
           if (year % 4 === 0) {
+
+            //b) if y%100=0 check inside, else return
                if (year % 100 === 0) {
+                    //c) if y%400=0 check inside, else return
                    if (year % 400 === 0) {
                     return "Leap Year";
                    }else{
                     return "Not a Leap Year";
                    }
+
                }else{
                 return "Leap Year";
                }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.15-practice- control statement for loop (8/12/25) </title>
+</head>
+<body>
+    <script>
+        /*
+        for(var i=0; i<100; i++){
+        //do something
+        }
+        
+        note: you can call function in console log to run your code.
+        
+        */
+
+
+
+
+        //track equation (a-f)
+            //a) main container
+            var output = []
+            //b) container item + increase item (removed var count=1;, added it in for loop)
+            
+
+            function fizzBuzz() {
+
+                //e)control statement, 100 times loop throug the count,push
+                for (var count = 1; count <= 100; count++) {
+                    //c)adding control flow with item, push in container
+                    /* if "count" divisible by both = fizzbuzz , the numbers divisible by 3 = fizz, if divisible by 5= buzz, */
+
+                    if (count % 3 === 0 && count % 5 === 0) {
+                        output.push("fizzBuzz");
+                    }
+
+                    else if (count % 3 === 0) {
+                        output.push("fizz");
+                    }
+                    else if (count % 5 === 0) {
+                        output.push("buzz");
+                    }
+
+                    else {
+                        //c1> b1)push control flow items "if-else count" ,into container "output"
+                        output.push(count);
+                    };
+                    //b2)increase item "count" =(removed count++. added in for loop)
+                    
+                };
+
+                //f)> d)console.log full pushed array
+                console.log(output)
+
+            }
+    </script>
+</body>
+</html>

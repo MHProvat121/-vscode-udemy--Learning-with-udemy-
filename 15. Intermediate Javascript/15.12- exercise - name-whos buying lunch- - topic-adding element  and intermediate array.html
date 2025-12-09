@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.12- exercise - name"whos buying lunch" - topic-adding element and intermediate array.html</title>
+</head>
+
+<body>
+    <script>
+        /*
+                Who's Buying Lunch? Code Challenge
+                    Instructions
+                    You are going to write a function which will select a random name from a list of names. 
+                    The person selected will have to pay for everybody's food bill.
+
+                    Important: The output should e returned from the function and you do not need alert, prompt or console.log. 
+                    The output should match the example output exactly, including capitalisation and punctuation.
+
+                    Example Input
+                    ["Angela", "Ben", "Jenny", "Michael", "Chloe"]
+
+                    Example Output
+                    Michael is going to buy lunch today!
+
+
+                    Hint
+                    1. You might need to think about Array.length.
+                    2. Remember that Arrays start at position 0!
+        
+        */
+
+        //track lines equation from (a-h)
+
+        //a) create arrays with names
+        var names=["provat","sajid","ahnaf","mom","dad"];
+
+
+        //g) create function > g1)give "names" array as parameter
+        function whosPaying(names){
+
+            //b)get the length of array "names.length" > b1)put in variable "numberOfPeople"
+           var numberOfPeople=names.length;//output: 1-5
+
+            //c)randomize the length ("Math.random() * numberOfPeople") number > d) wrap random number in "Math.floor(Math.random() * numberOfPeople);" > e) put all in variable , so the variable is a random length number
+            var randomPersonPosition=Math.floor(Math.random() * numberOfPeople);//c)output:0-0.9999999 d)output: 0-4
+
+            //e) use length as array position "names[randomPersonPosition];" > e1)put them in variable "randomPerson"
+            randomPerson= names[randomPersonPosition];//output: 0/1/2/3/4
+
+                //so randomPerson is a variable, with a "array position"
+
+            //f) return position
+            return randomPerson + " is going to buy lunch today" //output: 0=provat/1=sajid/2=ahnaf/3=mom/4=dad  "is going to buy....."
+
+        }
+
+        //h) return present, so put call function in a variable> h1) add function parameter value 
+        var selected=whosPaying(names);//output=return output:0=provat/1=sajid/2=ahnaf/3=mom/4=dad  "is going to buy....."
+        alert(selected);
+
+
+    </script>
+
+</body>
+
+</html>
