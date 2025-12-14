@@ -60,21 +60,6 @@ HINT: Use this Repl.it Playground to test out your solution.
 
 HINT: Use this flow chart to understand the logic if you get stuck.
 
-        //b) array container 
-var container=[];
-
-//a)create for loop
-for(var i=0; i<=10;i++){
-    //a1)create equation for fibonacci
-    n=i+1;
-    
-    //b1)push n numbers in container
-    var keep=container.push(n);
-    
-    
-}
-console.log(container);
-
 
 
 
@@ -156,8 +141,13 @@ console.log(container);
                         */
                     //d2) create a for loop
                     for (var i=2;i<n;i++){
-                         //d1)sum the last index numbers and push them into the array
-                    output.push(output[output.length - 2] + output[output.length - 1]);
+                    //d1)we can think
+                        totalLength=output.length;
+                        secondLastIndex=output[totalLength-2];
+                        LastIndex=output[totalLength-1];
+
+                         //d1.1)sum the last index numbers and push them into the array
+                    output.push(secondLastIndex + LastIndex);
                     }
                    
                     
