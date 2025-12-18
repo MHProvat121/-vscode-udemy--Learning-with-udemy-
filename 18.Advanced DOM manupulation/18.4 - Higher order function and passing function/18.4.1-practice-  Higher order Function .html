@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18.4-practice-Higher order function,passing function to another function </title>
+</head>
+<body>
+    <script>
+         /*
+               
+               definition: higher order functions are functions that thake other functions as input.
+               
+               example:
+
+               function add(n1,n2){}
+               function multiply(n1,n2){}
+               function calculator(n1,n2,operator){
+                return operator(n1,n2);
+               }
+                var call=calculator(4,5,add);
+                alert(call);
+
+
+            -------------------------ANOTHER PRACTICE------------
+            -click on a element (in console), check for $0
+            -type $0 in console (to get/select the elemenet)
+            - practice change with dom (example: $0.innerHTML="change")
+
+            --------------------------------------------------------
+
+           */
+
+
+        //track (a-c)
+
+        //a)make a function to add function 
+        function add(num1,num2){
+            return num1+num2;
+
+        }
+        //b)make a function to multiply function 
+        function multiply(num1,num2){
+            return num1*num2;
+        }
+
+        
+        /*
+            c)make higher order function "operator",
+             definition: higher order functions are functions that thake other functions as input.
+            
+             it is clone parent of "add" and "multiply"
+             other name,but values same (2 parameters)
+
+        */
+        function calculator(num1,num2,operator){
+         return operator(num1,num2);   
+        }
+        
+        var value = calculator(5,4,add);
+        console.log(value);
+        var value_1=calculator(5,4,multiply)
+        console.log(value_1);
+
+
+        /*
+
+                    // to test debugger track (d-f)
+
+                    //d)click enter
+                    //e)write - "debugger;" > press - "shift+Enter"
+                    //f)write call function "calculator(4,5,add)" or something else
+
+                    //example -
+                    // debugger;
+                    //calculator(4,5,add);
+                    
+        */
+
+
+
+
+    </script>
+</body>
+</html>

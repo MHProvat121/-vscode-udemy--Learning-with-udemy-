@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18.4-exercise- higher order function, passing functions to another function</title>
+</head>
+<body>
+    <script>
+
+        //track(a-f)
+            //a)
+            function add(num1, num2) {
+                return num1 + num2;
+
+            }
+
+            //b)
+            function multiply(num1, num2) {
+                return num1 * num2;
+            }
+
+            //c)
+            function subtract(num1, num2) {
+                    return num1 - num2;
+                }
+            //d)
+                function divide(num1, num2) {
+                    return num1 / num2;
+                }
+
+            //e)create a higher order function
+            function calculator(num1, num2, operator) {
+                return operator(num1, num2); //higher order function
+            }
+
+
+            //f) differently , call return values of higer order function 
+            var value = calculator(5, 4, add);
+            console.log(value);
+
+            var value_1 = calculator(5, 4, multiply);
+            console.log(value_1);
+
+            var value_2= calculator(5,4,subtract);
+            console.log(value_2);
+
+            var value_3=calculator(12,6,divide);
+            console.log(value_3);
+
+    </script>
+</body>
+</html>
