@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18.9-constructor function with methods in objects - object,their methods and dot notation</title>
+</head>
+<body>
+    <script>
+        //track(a-d)
+         //a)create constructor function
+            function BellBoy(Name, Age, Permit, Language) {
+                this.name = Name;
+                this.age = Age;
+                this.hasWorkPermit = Permit;
+                this.language = Language;
+                this.moveSuitcase = function(){
+                    alert("Roger, moving the suitcase");
+                }
+            }
+            //b)initialize/create prototype object for constructor function
+            var bellboy1 = new BellBoy("Tim", 19, true, ["french", "german"]);
+
+            //c) call object properties 
+            console.log(bellboy1);
+            console.log(bellboy1.name);
+            console.log(bellboy1.age);
+
+           //d)call oject method
+           bellboy1.moveSuitcase();
+            
+
+    </script>
+</body>
+</html>
