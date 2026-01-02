@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18.11-practice-using keyboard event listeners</title>
+</head>
+<body>
+    <script>
+        /*
+            | Event      | Fires when      | Use case          |
+            | ---------- | --------------- | ----------------- |
+            | `keydown`  | Key is pressed  | Games, shortcuts  |
+            | `keyup`    | Key is released | Forms, validation |
+            | `keypress` | Character input | ❌ Avoid          |
+
+
+        keyboard event listener for "keypress" and show which key is pressed
+            syntax:
+            document.addEventListener("keypress",function(event){
+            alert(event.key);
+            })
+            
+            a)here, function is working over a keyboard event
+            b)parameter event is holding function as a object
+            c)object.property = (event.key)
+
+        since "keypress" is backdated, we will use "keyup" instead
+
+        */
+
+
+        
+        document.addEventListener("keyup",function(event){
+            alert(event.key);
+        })
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
