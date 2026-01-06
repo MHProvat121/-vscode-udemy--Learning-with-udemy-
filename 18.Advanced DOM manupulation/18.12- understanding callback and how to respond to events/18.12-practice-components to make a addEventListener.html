@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To create a addEventListener function (their components)</title>
+</head>
+<body>
+    <script>
+        //a')How to get a object property value as a functions parameter
+       function mainFunction(obj) {
+            var object = {
+                key: "p"
+            };
+
+            if (object.key === obj) {
+                console.log("a object property value = a function param value");
+            }
+        }
+
+        mainFunction("p");
+
+        //b')how to add a function in another functions parameter value 
+        function anotherMainFunction(func) {
+                var object = {
+                key: "p"
+            };
+                func(object);
+            }
+
+            anotherMainFunction(function (e) {
+                console.log(e);
+            });
+
+            //so, if you add a')+b') it will create an "addEventListener" function
+
+
+
+    </script>
+</body>
+</html>

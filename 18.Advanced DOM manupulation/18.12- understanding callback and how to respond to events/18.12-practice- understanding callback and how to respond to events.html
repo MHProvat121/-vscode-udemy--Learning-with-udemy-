@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18.12- understanding callback and how to respond to events</title>
+</head>
+<body>
+    <script>
+    /*
+        HERE, WE WILL > MAKE A FUNCTION 
+            and learn>
+            1) how to take a object's property value > as functions parameter's value
+            2)how to take a anonymus function  > as a functions parameter's value
+
+
+        Example: 
+            
+        1)how to take a object's property value > as functions parameter's value
+                function mainFunction(obj) {
+                        var object = {
+                            key: "p"
+                        };
+
+                        if (object.key === obj) {
+                            console.log("a object property value = a function param value");
+                        }
+                    }
+
+                    mainFunction("p");
+
+
+        2)how to take a anonymus function  > as a functions parameter's value
+                    function anotherMainFunction(func) {
+                            var object = {
+                            key: "p"
+                        };
+                            func(object);
+                        }
+
+                        anotherMainFunction(function (e) {
+                            console.log(e);
+                        });
+
+    so, if you add (1+2) it will create an "addEventListener" function
+
+
+
+
+    Higher-order function:
+    - takes a function as input (callback)
+    
+    Callback function:
+    - runs AFTER an event condition is met
+
+    */
+
+//Learn how to make a real addEventListener function
+//track(a'-d')
+
+    //a')create main function anotherAddvEntListener
+        function anotherAddEventListener(typeOfEvent, callback) {
+
+            var eventThatHappened = {
+                eventType: "keypress",
+                key: "p",
+                durationOfKeypress: 2
+            };
+
+            //c')if a object property value is called
+            if (eventThatHappened.eventType === typeOfEvent) {
+            //d')then call the function = thats why it is a callback function, gets called after a action happened
+                callback(eventThatHappened);
+            }
+        }
+
+    //b)call main function anotherAddvEntListener
+        anotherAddEventListener("keypress", function (event) {
+            console.log(event);
+        });
+
+    </script>
+</body>
+</html>
