@@ -14,7 +14,7 @@ inquirer
         const url = answers.URL;
 
         // Generate PNG QR (copied from  qr-image npm package)
-        const qr_png = qr.image(url, { type: "png" });
+        const qr_png = qr.image(url);
         qr_png.pipe(fs.createWriteStream("qr-img.png"));
 
         // Save URL text (copied from fs npm package)
@@ -24,4 +24,4 @@ inquirer
         });
     });
 
-    // in terminal write node ./index.js
+    // in terminal write node .\index.js
