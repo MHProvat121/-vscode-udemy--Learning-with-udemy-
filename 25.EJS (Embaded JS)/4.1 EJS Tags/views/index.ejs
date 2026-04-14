@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EJS Tags</title>
+</head>
+
+<body>
+  <!--track a'-e' -->
+
+  <h1>
+    <!-- Tite goes here -->
+     <!-- a') [js output] throug ejs-->
+     <%= title %>
+
+  </h1>
+  <p>Current second:
+    <!-- Current second goes here -->
+    <!-- b') [js output] throug ejs-->
+     <%= seconds %>
+  </p>
+        <!-- c') [js execute] only code -->
+        <% if (seconds % 2===0) { %>
+        
+                  <ul>
+                    <!-- List goes here if current second is even. -->
+                    <!-- Otherwise it should display the following: -->
+                    <!-- <p>No items to display</p>      -->
+
+                    <!-- d') loop for each items in array, here items = variable and fruit=array     -->
+                    <% items.forEach((fruit) => { %>
+                      
+                      <li>
+                        <%=fruit %>
+                      </li>
+
+                    <%  }); %>
+
+                  </ul>
+                  
+        <% } else {  %>
+        <p>No items to display</p>
+        <% } %>
+  <p>
+    <!-- HTML content goes here -->
+    <!-- d') [render html] -->
+     <%- htmlContent %>
+
+  </p>
+
+  <!-- Footer goes here -->
+  <!-- e') [insert another EJS file] -->
+   <%- include ("footer.ejs") %>
+</body>
+
+</html>

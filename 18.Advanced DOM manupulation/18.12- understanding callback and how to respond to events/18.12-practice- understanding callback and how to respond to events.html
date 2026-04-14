@@ -68,7 +68,7 @@
             };
 
             //c')if a object property value is called
-            if (eventThatHappened.eventType === typeOfEvent) {
+            if (typeOfEvent === eventThatHappened.eventType ) {
             //d')then call the function = thats why it is a callback function, gets called after a action happened
                 callback(eventThatHappened);
             }

@@ -13,27 +13,49 @@
                 key: "p"
             };
 
-            if (object.key === obj) {
+            if (obj === object.key) {
                 console.log("a object property value = a function param value");
             }
         }
 
         mainFunction("p");
 
-        //b')how to add a function in another functions parameter value 
+        //b')how to add a function - in another functions parameter value 
         function anotherMainFunction(func) {
                 var object = {
                 key: "p"
             };
-                func(object);
+                func(object); //***[(new**)function variable turned into a function]> taking obj as its variable
             }
 
-            anotherMainFunction(function (e) {
+            anotherMainFunction(
+                //here, function(e)= func(object)
+                function (e){  
+            
                 console.log(e);
             });
 
             //so, if you add a')+b') it will create an "addEventListener" function
+            /*ex:
+                    
+                function addEventListener(obj,func){
+                    
+                        var object = {
+                        key: "p"
+                        };
+                    }
 
+                    if (obj === object.key) {
+                        func(object);
+                    }
+                    
+                    addEventListener("p",function(e){
+                        //code
+                    })
+            
+            so, addEventListener( 1.obj key value/key, 2.full object> both 1,2 are under listner function)
+
+            */
 
 
     </script>

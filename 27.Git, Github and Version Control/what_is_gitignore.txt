@@ -1,0 +1,14 @@
+.gitignore is a file, where you will put all your secret information/files; 
+to protect them from pulling by others from git or github.
+
+ex: your API key,secrets folder, .log etc 
+
+-----------------------------------------------------
+go to: https://github.com/github/gitignore 
+
+About
+A collection of useful .gitignore templates
+
+select your important type ex: for us "Node.gitignore" and copy paste all the code in yout .gitignore file
+---------------------------------------------------------
+
